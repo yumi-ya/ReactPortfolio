@@ -1,0 +1,17 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  background-color: lightcoral;
+  align-items: center;
+}
+
+.icon {
+  display: block;
+  width: 48px;
+}
