@@ -1,7 +1,7 @@
-// import React from 'react';
+import React from "react";
 import menu from "./imgs/icon.svg";
 
-import * as React from "react";
+// import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -34,6 +34,9 @@ const styles = {
     margin: "5px",
     width: "50px"
   },
+  logoTitle: {
+    marginBottom: 0
+  },
   nav: {
     height: "80px",
     bgcolor: "#FA8B61"
@@ -54,8 +57,25 @@ const styles = {
     }
   },
   hamburger: {
-    fontSize: "50px"
+    display: "none",
+    "@media screen and (max-width: 800px)": {
+      display: "block",
+      fontSize: "40px"
+    }
+  },
+  navList: {
+    display: "flex",
+    fontSize: "16px",
+    listStyle: "none",
+    fontWeight: 700,
+    "@media screen and (max-width: 800px)": {
+      display: "none",
+      backgroundColor: "pink"
+    }
   }
+  //   navItems: {
+  //       display: 'none',
+  // },
 };
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
@@ -124,11 +144,17 @@ export default function PersistentDrawerRight() {
       <CssBaseline />
       <AppBar position="fixed" open={open}>
         <Toolbar sx={styles.nav}>
-          {/* <div> */}
           <img src={menu} alt="" style={styles.logo} />
-          {/* </div> */}
-          <Typography variant="h3" noWrap sx={{ flexGrow: 1 }} component="div">
-            React
+          <Typography variant="h5" noWrap sx={{ flexGrow: 1 }} component="div">
+            <h2 style={styles.logoTitle}>YagiWorks</h2>
+            <ul style={styles.navList}>
+              <li style={styles.navItems}>制作物</li>
+              <li style={styles.navItems}>スキル</li>
+              <li style={styles.navItems}>自己紹介</li>
+              <li style={styles.navItems}>金額</li>
+              <li style={styles.navItems}>FAQ</li>
+              <li style={styles.navItems}>お問い合わせ</li>
+            </ul>
           </Typography>
           <IconButton
             color="inherit"

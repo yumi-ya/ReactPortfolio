@@ -8,8 +8,7 @@ export default function App() {
   return (
     <div className="App">
       <Header />
-      <h1>Welcome to React World</h1>
-      <h2>Let's get started!</h2>
+      <p>main</p>
       <Footer />
     </div>
   );

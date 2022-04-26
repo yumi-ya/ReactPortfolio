@@ -1,6 +1,8 @@
 .App {
+  position: relative;
   font-family: sans-serif;
   text-align: center;
+  height: 100vh;
 }
 
 .header {
@@ -11,7 +13,29 @@
   align-items: center;
 }
 
-.icon {
+/* .icon {
   display: block;
   width: 48px;
+} */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  background-color: #f1f1f1;
+}
+
+.twitter {
+  font-size: 20px;
+  color: #00acee;
+}
+
+.copyright {
+  height: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  @media screen and (max-width: 375px) {
+    font-size: 12px;
+  }
 }
