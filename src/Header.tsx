@@ -62,20 +62,7 @@ const styles = {
       display: "block",
       fontSize: "40px"
     }
-  },
-  navList: {
-    display: "flex",
-    fontSize: "16px",
-    listStyle: "none",
-    fontWeight: 700,
-    "@media screen and (max-width: 800px)": {
-      display: "none",
-      backgroundColor: "pink"
-    }
   }
-  //   navItems: {
-  //       display: 'none',
-  // },
 };
 
 const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
@@ -146,14 +133,14 @@ export default function PersistentDrawerRight() {
         <Toolbar sx={styles.nav}>
           <img src={menu} alt="" style={styles.logo} />
           <Typography variant="h5" noWrap sx={{ flexGrow: 1 }} component="div">
-            <h2 style={styles.logoTitle}>YagiWorks</h2>
-            <ul style={styles.navList}>
-              <li style={styles.navItems}>制作物</li>
-              <li style={styles.navItems}>スキル</li>
-              <li style={styles.navItems}>自己紹介</li>
-              <li style={styles.navItems}>金額</li>
-              <li style={styles.navItems}>FAQ</li>
-              <li style={styles.navItems}>お問い合わせ</li>
+            <h2 className="logoTitle">YagiWorks</h2>
+            <ul className="navList">
+              <li className="navList">制作物</li>
+              <li className="navList">スキル</li>
+              <li className="navList">自己紹介</li>
+              <li className="navList">金額</li>
+              <li className="navList">FAQ</li>
+              <li className="navList">お問い合わせ</li>
             </ul>
           </Typography>
           <IconButton
